@@ -1,0 +1,176 @@
+/* style.css - Estilo inspirado no site da Shar */
+
+/* Reset básico e fundo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f1e8;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L100,0 L100,100 Z" fill="%23e8e3d6" opacity="0.1"/></svg>');
+    min-height: 100vh;
+    padding: 20px;
+    color: #5a4c3e;
+}
+
+/* Área do desktop */
+.desktop {
+    position: relative;
+    min-height: 90vh;
+}
+
+/* ESTILO DAS JANELAS */
+.window {
+    position: absolute;
+    width: 350px;
+    background: #fffaf0;
+    border-radius: 12px;
+    box-shadow: 
+        0 10px 30px rgba(90, 76, 62, 0.15),
+        0 1px 3px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    overflow: hidden;
+    border: 1px solid #d4c9b8;
+}
+
+/* Cabeçalho da janela */
+.window-header {
+    background: linear-gradient(to bottom, #8a7b69, #6d5d4b);
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #5a4c3e;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    cursor: move; /* Indica que pode ser arrastado */
+}
+
+.window-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botões de controle da janela */
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-controls button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.min-btn {
+    background: #ffbd44;
+}
+.min-btn:hover { background: #ffa726; }
+
+.max-btn {
+    background: #44cc44;
+}
+.max-btn:hover { background: #2ecc71; }
+
+.close-btn {
+    background: #ff5555;
+    color: white;
+}
+.close-btn:hover { background: #ff3333; }
+
+/* Conteúdo da janela */
+.window-content {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.window-content h2 {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #6d5d4b;
+}
+
+.window-content p {
+    margin-bottom: 12px;
+}
+
+/* Tags estilo site da Shar */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tag {
+    background: #e8e3d6;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid #d4c9b8;
+}
+
+/* Lista de links */
+.links-list {
+    list-style: none;
+}
+
+.links-list li {
+    margin-bottom: 12px;
+}
+
+.links-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6d5d4b;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.links-list a:hover {
+    background: #e8e3d6;
+    border-color: #d4c9b8;
+    transform: translateX(5px);
+}
+
+/* Posicionamento das janelas */
+#about-window {
+    top: 50px;
+    left: 100px;
+}
+
+#links-window {
+    top: 150px;
+    left: 500px;
+}
+
+/* Instrução no canto (como no site da Shar) */
+.instruction {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #d4c9b8;
+    font-size: 14px;
+    max-width: 300px;
+}
